@@ -1,0 +1,273 @@
+:root{
+    --gradient:linear-gradient(90deg , #ff4d4d , #ff3838);
+}
+
+.success{
+    color: rgb(36, 175, 36);
+}
+.error{
+ color: rgb(241, 7, 7);
+}
+
+*{
+   font-family: 'Open Sans', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   outline: none;
+   text-decoration: none;
+   text-transform: capitalize;
+   transition: all .2s linear;
+   scroll-behavior: smooth;
+}
+
+::selection{
+   background: #ff3838;
+   color: #fff;
+}
+html{
+   font-size: 65%;
+   overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+   width: 1rem;
+}
+html::-webkit-scrollbar-track{
+   background: #333;
+}
+html::-webkit-scrollbar-thumb{
+   background: linear-gradient( #ff4d4d , #ff3838);
+}
+/* body{
+   height: 300rem;
+} */
+.btn{
+   padding: .8rem 2rem;
+   font-size: 1.8rem;
+   color: #fff;
+   background: var(--gradient);
+   border-radius: 5rem;
+   margin-top: 1rem;
+   cursor: pointer;
+   box-shadow: 0 .1rem .5rem rgba(0,0,0,0.3);
+   position: relative;
+   overflow: hidden;
+   z-index: 0;
+}
+.btn::before{
+   content: '';
+   position: absolute;
+   top: -1rem;
+   left: -100%;
+   background: #fff9;
+   height: 150%;
+   width: 20%;
+   transform: rotate(30deg);
+   z-index: -1;
+}
+.btn:hover:before{
+   transition: .5s linear;
+   left: 120%;
+}
+
+.heading{
+   color: #444;
+   padding: 1rem;
+   font-size: 5rem;
+   text-align: center;
+}
+.btn-primary{
+    padding: .8rem 2rem;
+    font-size: 1.8rem;
+    color: #fff;
+    background: var(--gradient);
+    border-radius: 5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 .1rem .5rem rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.btn-secondary{
+    font-size: 1.5rem;
+    background-color: #056e9e;
+    padding: 2%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-danger{
+    font-size: 1.5rem;
+    background-color: #ff7f50;
+    padding: 2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.tbl-full{
+    width: 100%;
+    
+}
+.tbl-full tr td{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+table tr th {
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+.tbl-50 tr td{
+    font-size: 2rem;
+    padding: 1%;
+    text-align: left; 
+}
+.tbl-50 tr td input{
+    padding: .7rem .2rem;
+    border: .1rem solid #444;
+}
+.tbl-50 tr td a{
+    padding: .7rem .2rem;
+    border: .1rem solid #444;
+}
+
+
+
+
+section{
+   padding: 1rem 10%;
+   padding-top: 5rem;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+
+/* header */
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 7%;
+    background: var(--gradient);
+    box-shadow: 0 .1rem .5rem rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+header .logo{
+    color: #fff;
+    font-size: 3rem;
+}
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space;
+    list-style: none;
+}
+header .navbar ul li{
+    margin: 0 1rem;
+}
+header .navbar ul li a{
+    font-size: 2rem;
+    color: #fff;
+}
+/* header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color: #666;
+} */
+header #login{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+header #login:hover{
+    color: #666;
+}
+header #menu{
+    font-size: 4rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+.text-center{
+    text-align: center;
+}
+
+
+/* css for the dash board section */
+.dashboard{
+        margin-top: 5%;
+        background-color: #c6ccd1;
+        padding: 3% 0;
+}
+.dashboard .wrapper{
+    margin-top: 5%;
+    padding: 1%;
+    margin: 0 auto;
+    width: 90%;
+}
+.dashboard .wrapper h1{
+    font-size: 3rem;
+}
+.col-4 {
+    font-size: 1.5rem;
+    background-color: #ff4d4d;
+    margin: 1%;
+    padding: 2%;
+    width: 20%;
+    float: left;
+}
+/* finished dashboard */
+
+/* css for the login form */
+
+.wrapper .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10% 35%;
+    /* padding: 20%; */
+    border: .1rem solid #444;
+}
+.wrapper .container form{
+    padding: 5rem 2rem;
+    font-size: 1.5rem;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper .container form input{
+    border: .1rem solid #333;
+}
+.wrapper .container form input:focus{
+    border-color: #ff4d4d;
+}
+.wrapper .container form a{
+   font-size: 1.3rem;
+}
+.wrapper .container h1{
+    font-size: 3rem;
+}
+
+
+/* css for the footer section */
+.footer {
+    height: 5rem;
+    background-color: #ff3838;
+    color: white;
+}
+.footer .wrapper p{
+    font-size: 1.3rem;
+    padding: 1%;
+}
